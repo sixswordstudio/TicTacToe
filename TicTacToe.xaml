@@ -117,7 +117,7 @@
             Grid.ColumnSpan="5"
             x:Name="pbTurnIndicator"
             IsIndeterminate="True"
-            
+            BorderBrush="Transparent"
             Grid.Row="2"
             Height="30"
             Margin="5"
@@ -155,6 +155,122 @@
 
         <!--#endregion (Turn Indicator)-->
         <!--#region Game Board -->
+        <Button
+            Grid.Column="1"
+            Grid.Row="3"
+            x:Name="btn00"
+            FontSize="50"
+            FontWeight="Bold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="FloralWhite"
+            Background="Black"
+            BorderBrush="DarkOliveGreen"
+            BorderThickness="0,0,1,1"
+            Click="btnClick"/>
         
+        <Button
+            Grid.Column="2"
+            Grid.Row="3"
+            x:Name="btn01"
+            FontSize="50"
+            FontWeight="Bold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="FloralWhite"
+            Background="Black"
+            BorderBrush="DarkOliveGreen"
+            BorderThickness="0,0,1,1"
+            Click="btnClick"/>
+        
+        <Button 
+            Grid.Column="3"
+            Grid.Row="3"
+            x:Name="btn02"
+            FontSize="50"
+            FontWeight="Bold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="FloralWhite"
+            Background="Black"
+            BorderBrush="DarkOliveGreen"
+            BorderThickness="0,0,0,1"
+            Click="btnClick"/>
+        
+        <Button 
+            Grid.Column="1"
+            Grid.Row="4"
+            x:Name="btn10"
+            FontSize="50"
+            FontWeight="Bold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="FloralWhite"
+            Background="Black"
+            BorderBrush="DarkOliveGreen"
+            BorderThickness="0,0,1,1"
+            Click="btnClick"/>
+        
+        <Button 
+            Grid.Column="2"
+            Grid.Row="4"
+            x:Name="btn11"
+            FontSize="50"
+            FontWeight="Bold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="FloralWhite"
+            Background="Black"
+            BorderBrush="DarkOliveGreen"
+            BorderThickness="0,0,1,1"
+            Click="btnClick"/>
+        
+        <Button 
+            Grid.Column="3"
+            Grid.Row="4"
+            x:Name="btn12"
+            FontSize="50"
+            FontWeight="Bold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="FloralWhite"
+            Background="Black"
+            BorderBrush="DarkOliveGreen"
+            BorderThickness="0,0,0,1"
+            Click="btnClick"/>
+        
+        <Button 
+            Grid.Column="1"
+            Grid.Row="5"
+            x:Name="btn20"
+            FontSize="50"
+            FontWeight="Bold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="FloralWhite"
+            Background="Black"
+            BorderBrush="DarkOliveGreen"
+            BorderThickness="0,0,1,0"
+            Click="btnClick"/>
+        
+        <Button 
+            Grid.Column="2"
+            Grid.Row="5"
+            x:Name="btn21"
+            FontSize="50"
+            FontWeight="Bold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="FloralWhite"
+            Background="Black"
+            BorderBrush="DarkOliveGreen"
+            BorderThickness="0,0,1,0"
+            Click="btnClick"/>
+        
+        <Button 
+            Grid.Column="3"
+            Grid.Row="5"
+            x:Name="btn22"
+            FontSize="50"
+            FontWeight="Bold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="FloralWhite"
+            Background="Black"
+            BorderBrush="DarkOliveGreen"
+            BorderThickness="0,0,0,0"
+            Click="btnClick"/>
+
     </Grid>
 </Window>
