@@ -14,9 +14,9 @@ namespace TicTacToeGame
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class TicTacToeWindow : Window
+    public partial class TicTacToe : Window
     {
-        public TicTacToeWindow()
+        public TicTacToe()
         {
             InitializeComponent();
         }

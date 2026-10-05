@@ -1,0 +1,122 @@
+﻿<!-- Name:Amy Park -->
+<!-- Course:COSC2100 -->
+<!-- Date: September 2026 -->
+<!-- Description:This file is part of the TicTacToe project. -->
+<!-- Note to self: The x:Class must match the C# namespace and class name-->
+<Window x:Class="TicTacToeGame.TicTacToe"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:TicTacToeGame"
+    mc:Ignorable="d"
+    Title="ticTacToeGame" Height="650" Width="650" ResizeMode="NoResize" Background="LightGray">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="col0" Width="100" />
+            <ColumnDefinition x:Name="col2" Width="150"/>
+            <ColumnDefinition x:Name="col3Game" Width="150" />
+            <ColumnDefinition x:Name="col4Game" Width="150" />
+            <ColumnDefinition x:Name="col5Game" Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="row0Menu" Height="40" />
+            <RowDefinition x:Name="row1Score" Height="60" />
+            <RowDefinition x:Name="row2Turn" Height="60"/>
+            <RowDefinition x:Name="row3Game0" Height="150" />
+            <RowDefinition x:Name="row4Game1" Height="150" />
+            <RowDefinition x:Name="row5Game2" Height="150" />
+        </Grid.RowDefinitions>
+
+        <!--#region Menu Items -->
+        <!-- Menu Item 1 (Column 1) -->
+        <Menu Grid.Column="0" Background="Transparent">
+            <MenuItem Header="_File" 
+                      Focusable="True" />
+            <MenuItem Header="_Edit" 
+                      Focusable="True"
+                      />
+        </Menu>
+        
+
+        <!--#endregion (Menu Items)-->
+        
+        <!--#region Scoreboard-->
+
+        <!--#region Left Player-->
+        <Label 
+            Grid.Column="0" 
+            x:Name="lblPlayer1"
+            Content="Player 1" 
+            Grid.Row="1" 
+            HorizontalAlignment="Right" 
+            VerticalAlignment="Center" 
+            Margin="5" />
+        
+        <TextBox 
+            Grid.Column="1" 
+            x:Name="txtPlayer1Score" 
+            Text="0" 
+            Grid.Row="1" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Center" 
+            Margin="5" 
+            Width="50"
+            IsReadOnly="True"
+            />
+        
+        <Label 
+            Grid.Column="1" 
+            x:Name="lblX"
+            Content="X"
+            FontSize="30"
+            FontWeight="ExtraBold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="DarkRed"
+            Grid.Row="1" 
+            HorizontalAlignment="Right" 
+            VerticalAlignment="Center" 
+            Margin="5" />
+        
+        <!--#endregion (Left Player)-->
+        
+        <!--#region Right Player-->
+        <Label 
+            Grid.Column="6" 
+            x:Name="lblPlayer2"
+            Content="Player 2" 
+            Grid.Row="1" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Center" 
+            Margin="5" />
+        <TextBox
+            Grid.Column="3"
+            x:Name="txtPlayer2Score"
+            Text="0"
+            TextAlignment="Right"
+            Grid.Row="1"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Margin="5"
+            Width="50"
+            IsReadOnly="True"
+            />
+        <Label 
+            Grid.Column="3" 
+            x:Name="lblO"
+            Content="O"
+            FontSize="30"
+            FontWeight="ExtraBold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="DarkCyan"
+            Grid.Row="1" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Center" 
+            Margin="5" />
+
+        <!--#endregion (Right Player)-->
+        
+        <!--#endregion (Scoreboard)-->
+        
+    </Grid>
+</Window>
