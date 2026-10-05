@@ -2,33 +2,44 @@
 <!-- Course:COSC2100 -->
 <!-- Date: September 2026 -->
 <!-- Description:This file is part of the TicTacToe project. -->
-<Window x:Class="TicTacToe.MainWindow"
+<Window x:Class="TicTacToeGame.TicTacToeWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:TicTacToe"
+    xmlns:local="clr-namespace:TicTacToeGame"
     mc:Ignorable="d"
-    Title="MainWindow" Height="650" Width="700" ResizeMode="NoResize">
-<Grid>
-    <Grid/>
-    <Grid.ColumnDefinitions>
-        <ColumnDefinition x:Name="col0_margin" Width="20" />
-        <ColumnDefinition x:Name="col1_file" Width="100"/>
-        <ColumnDefinition x:Name="col2_edit" Width="150"/>
-        <ColumnDefinition x:Name="col3_game0" Width="150" />
-        <ColumnDefinition x:Name="col4_game1" Width="150" />
-        <ColumnDefinition x:Name="col5_game2" Width="100" />
-        <ColumnDefinition x:Name="col6_margin" Width="20" />
+    Title="TicTacToeGame" Height="650" Width="650" ResizeMode="NoResize">
+    <Grid>
+        <!--#region Menu Items -->
+        <!-- Menu Item 1 (Column 1) -->
+        <Menu Grid.Column="0" Background="Transparent" >
+            <MenuItem Header="_File" Focusable="True" />
+            <MenuItem Header="_Edit" Focusable="True" />
+        </Menu>
+        <!--#endregion-->
+        
+        <!--#region Scoreboard-->
+        
+        
+        <!--#endregion-->
+        
+        <!--#region Grid Definitions -->
+        <!-- Grid Columns and Row Definitions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="col0" Width="100" />
+            <ColumnDefinition x:Name="col2" Width="150"/>
+        <ColumnDefinition x:Name="col3Game" Width="150" />
+        <ColumnDefinition x:Name="col4Game" Width="150" />
+        <ColumnDefinition x:Name="col5Game" Width="100" />
     </Grid.ColumnDefinitions>
-    <Grid.RowDefinitions>
-        <RowDefinition x:Name="row0_menu" Height="40" />
-        <RowDefinition x:Name="row1_score" Height="60" />
-        <RowDefinition x:Name="row2_turn" Height="60"/>
-        <RowDefinition x:Name="row3_game0" Height="150" />
-        <RowDefinition x:Name="row4_game1" Height="150" />
-        <RowDefinition x:Name="row5_game2" Height="150" />
-        <RowDefinition x:Name="row6_margin" Height="20" />
-    </Grid.RowDefinitions>
-</Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="row0Menu" Height="40" />
+            <RowDefinition x:Name="row1Score" Height="60" />
+            <RowDefinition x:Name="row2Turn" Height="60"/>
+            <RowDefinition x:Name="row3Game0" Height="150" />
+            <RowDefinition x:Name="row4Game1" Height="150" />
+            <RowDefinition x:Name="row5Game2" Height="150" />
+        </Grid.RowDefinitions>
+    </Grid>
 </Window>

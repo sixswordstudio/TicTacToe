@@ -9,14 +9,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TicTacToe
+namespace TicTacToeGame
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class TicTacToeWindow : Window
     {
-        public MainWindow()
+        public TicTacToeWindow()
         {
             InitializeComponent();
         }
