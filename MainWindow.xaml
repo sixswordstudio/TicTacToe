@@ -14,18 +14,27 @@
         <!--#region Menu Items -->
         <!-- Menu Item 1 (Column 1) -->
         <Menu Grid.Column="0" Background="Transparent" >
-            <MenuItem Header="_File" Focusable="True" />
-            <MenuItem Header="_Edit" Focusable="True" />
+            <MenuItem Header="_File" 
+                      Focusable="True" />
+            <MenuItem Header="_Edit" 
+                      Focusable="True"
+                      />
         </Menu>
-        <!--#endregion-->
+        <!--#endregion (Menu Items)-->
         
         <!--#region Scoreboard-->
+
+        <!--#region Left Player-->
         
+        <!--#endregion (Left Player)-->
         
-        <!--#endregion-->
+        <!--#region Right Player-->
+        
+        <!--#endregion (Right Player)-->
+        
+        <!--#endregion (Scoreboard)-->
         
         <!--#region Grid Definitions -->
-        <!-- Grid Columns and Row Definitions -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="col0" Width="100" />
             <ColumnDefinition x:Name="col2" Width="150"/>
