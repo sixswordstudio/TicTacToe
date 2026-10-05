@@ -10,7 +10,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:local="clr-namespace:TicTacToeGame"
     mc:Ignorable="d"
-    Title="ticTacToeGame" Height="650" Width="650" ResizeMode="NoResize" Background="LightGray">
+    Title="ticTacToeGame" Height="650" Width="650" ResizeMode="NoResize" Background="Black">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition x:Name="col0" Width="100" />
@@ -20,17 +20,19 @@
             <ColumnDefinition x:Name="col5Game" Width="100" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition x:Name="row0Menu" Height="40" />
+            <RowDefinition x:Name="row0Menu" Height="20" />
             <RowDefinition x:Name="row1Score" Height="60" />
             <RowDefinition x:Name="row2Turn" Height="60"/>
             <RowDefinition x:Name="row3Game0" Height="150" />
             <RowDefinition x:Name="row4Game1" Height="150" />
             <RowDefinition x:Name="row5Game2" Height="150" />
+            <RowDefinition x:Name="row6Margin" Height="20" />
+
         </Grid.RowDefinitions>
 
         <!--#region Menu Items -->
         <!-- Menu Item 1 (Column 1) -->
-        <Menu Grid.Column="0" Background="Transparent">
+        <Menu Grid.Column="0" Grid.ColumnSpan="5" Background="DarkOliveGreen" BorderBrush="FloralWhite" BorderThickness="0,0,0,.5" Foreground="FloralWhite" VerticalAlignment="Center">
             <MenuItem Header="_File" 
                       Focusable="True" />
             <MenuItem Header="_Edit" 
@@ -47,76 +49,112 @@
         <Label 
             Grid.Column="0" 
             x:Name="lblPlayer1"
-            Content="Player 1" 
+            Content="Player 1"
+            FontSize="20"
+            FontWeight="ExtraBold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="FloralWhite"
             Grid.Row="1" 
             HorizontalAlignment="Right" 
             VerticalAlignment="Center" 
             Margin="5" />
-        
-        <TextBox 
-            Grid.Column="1" 
-            x:Name="txtPlayer1Score" 
-            Text="0" 
-            Grid.Row="1" 
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Center" 
-            Margin="5" 
-            Width="50"
-            IsReadOnly="True"
-            />
         
         <Label 
             Grid.Column="1" 
             x:Name="lblX"
             Content="X"
-            FontSize="30"
-            FontWeight="ExtraBold"
+            FontSize="35"
             FontFamily="Franklin Gothic Bold"
-            Foreground="DarkRed"
+            Foreground="Red"
             Grid.Row="1" 
             HorizontalAlignment="Right" 
-            VerticalAlignment="Center" 
-            Margin="5" />
-        
+            VerticalAlignment="Center" />
+        <Label 
+            Grid.Column="2" 
+            x:Name="txtPlayer1Score"
+            Content="- 2"
+            Foreground="FloralWhite"
+            FontSize="35"
+            FontFamily="Franklin Gothic Bold"
+            Grid.Row="1" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Center"
+            />
+
         <!--#endregion (Left Player)-->
         
         <!--#region Right Player-->
         <Label 
             Grid.Column="6" 
             x:Name="lblPlayer2"
-            Content="Player 2" 
+            Content="Player 2"
+            FontSize="20"
+            FontWeight="ExtraBold"
+            FontFamily="Franklin Gothic Bold"
+            Foreground="FloralWhite"
             Grid.Row="1" 
             HorizontalAlignment="Left" 
             VerticalAlignment="Center" 
             Margin="5" />
-        <TextBox
-            Grid.Column="3"
-            x:Name="txtPlayer2Score"
-            Text="0"
-            TextAlignment="Right"
-            Grid.Row="1"
-            HorizontalAlignment="Right"
-            VerticalAlignment="Center"
-            Margin="5"
-            Width="50"
-            IsReadOnly="True"
-            />
         <Label 
             Grid.Column="3" 
             x:Name="lblO"
             Content="O"
-            FontSize="30"
-            FontWeight="ExtraBold"
+            FontSize="35"
             FontFamily="Franklin Gothic Bold"
-            Foreground="DarkCyan"
+            Foreground="Cyan"
             Grid.Row="1" 
             HorizontalAlignment="Left" 
-            VerticalAlignment="Center" 
-            Margin="5" />
+            VerticalAlignment="Center"/>
 
         <!--#endregion (Right Player)-->
         
         <!--#endregion (Scoreboard)-->
+        
+        <!--#region Turn Indicator -->
+        <ProgressBar
+            Grid.Column="0"
+            Grid.ColumnSpan="5"
+            x:Name="pbTurnIndicator"
+            IsIndeterminate="True"
+            
+            Grid.Row="2"
+            Height="30"
+            Margin="5"
+            Minimum="100"
+            Maximum="0"
+            Value="100"
+            Foreground="Red"
+            Background="Black"
+            />
+        <Label 
+            Grid.Column="0"
+            Grid.ColumnSpan="5"
+            Height="30
+            "
+            x:Name="lblTurn"
+            Content="TURN"
+            Background="Red"
+            FontSize="20"
+            FontWeight="ExtraBold"
+            FontFamily="Franklin Gothic Bold"
+            Grid.Row="2"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"/>
+        <Label 
+            Grid.Column="2" 
+            x:Name="txtPlayer1Score_Copy"
+            Content="1 -"
+            Foreground="FloralWhite"
+            FontSize="35"
+            FontFamily="Franklin Gothic Bold"
+            Grid.Row="1" 
+            HorizontalAlignment="Right" 
+            VerticalAlignment="Center"
+            />
+
+        <!--#endregion (Turn Indicator)-->
+        <!--#region Game Board -->
         
     </Grid>
 </Window>
