@@ -1,0 +1,30 @@
+﻿<Window x:Class="TicTacToe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TicTacToe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="col0_margin" />
+            <ColumnDefinition x:Name="col1_file" />
+            <ColumnDefinition x:Name="col2_edit" />
+            <ColumnDefinition x:Name="col3_game0" />
+            <ColumnDefinition x:Name="col4_game1" />
+            <ColumnDefinition x:Name="col5_game2" />
+            <ColumnDefinition x:Name="col6_margin" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="row0_menu" />
+            <RowDefinition x:Name="row1_score" />
+            <RowDefinition x:Name="row2_turn" />
+            <RowDefinition x:Name="row3_game0" />
+            <RowDefinition x:Name="row4_game1" />
+            <RowDefinition x:Name="row5_game2" />
+            <RowDefinition x:Name="row6_margin" />
+        </Grid.RowDefinitions>
+    </Grid>
+</Window>
